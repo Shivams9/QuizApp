@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<body bgcolor="pink" ></body>
+<form>
+    <center>
+
+    <h1 style="color:green">New MCQ Quiz</h1>
+<!--    <h2>{{x}}</h2>-->
+        <h2>{{currentquestion}}</h2>
+
+    <input type="text" name="question" value="{{qno}}">
+        <input type="submit" name="Next">
+<!--    <input type="hidden" name="option" value="{{score}}"><br>-->
+
+        <br>
+        <input type="radio" name="options" value="1" >{{opta}}
+        <br>
+        <input type="radio" name="options" value="2" >{{optb}}<br>
+        <input type="radio" name="options" value="3" >{{optc}}<br>
+        <input type="radio" name="options" value="4" >{{optd}}<br>
+
+<!--    <h2 style="color:black">Result :- {{result}}</h2>-->
+<!--        <input type="submit" value="next">-->
+    </center>
+</form>
+</body>
+</html>

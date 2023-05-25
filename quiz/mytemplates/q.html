@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+
+    <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+    />
+
+    <title>True-False Quiz</title>
+    <style>
+      .top {
+        position: absolute;
+        background-color: teal;
+        width: 100%;
+        height: 10%;
+      }
+      .h1style {
+        width: fit-content;
+        background-color: wheat;
+        box-shadow: 10px 10px 30px black;
+        border-radius: 5%;
+        z-index: 10;
+      }
+      .centerdiv {
+        position: absolute;
+        background-color: black;
+        top: 10.1%;
+        width: 100%;
+        height: 60%;
+      }
+      .questiondisplay {
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        color: lightcoral;
+        font-size: xx-large;
+      }
+      .truebutton {
+        position: absolute;
+        top: 70%;
+        width: 100%;
+        height: 10%;
+        background-color: lightgreen;
+        font-size: xx-large;
+      }
+      .falsebutton {
+        position: absolute;
+        font-size: xx-large;
+        top: 80%;
+        width: 100%;
+        height: 10%;
+        background-color: red;
+        opacity: 0.8s;
+      }
+      .results {
+        position: absolute;
+        font-size: xx-large;
+        top: 90%;
+        width: 100%;
+        height: 10%;
+        background-color: black;
+        color:white;
+        opacity: 0.8s;
+      }
+
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <center>
+        <h1 class="h1style">Quiz</h1>
+    </center>
+</div>
+<div class="centerdiv">
+    <center class="questiondisplay">{{currentquestion}}</center>
+
+</div>
+<form>
+<!--    <textarea style="display:none;" name="result">{{results|safe}}</textarea>-->
+    <input type="hidden" name="question" value="{{qno}}">
+    <input type="hidden" name="score" value="{{score}}">
+    <button class="truebutton" name="option" type="submit" value="1">True</button>
+    <button class="falsebutton" name="option" type="submit" value="0">False</button>
+</form>
+<div class="results">
+    {{result}}
+</div>
+</body>
+</html>
